@@ -1,6 +1,6 @@
-# Eshoe
+# eShoe
 
-Eshoe is an onlin ecoomerce site
+eCommerce site for purchasing affordable shoes 
 
 ## Technology
 
@@ -9,7 +9,7 @@ html, css, bootstap, php, sql, font awesome
 
 ## Description
 
-It has two interfaces one for admin and one for client
+Our plan for our site is to create an eCommerce site where the main purpose of the website is the transactions of buying shoes. You will be able to create an account which will be added to the main database and remember the shopping cart that you left off with. Public users will be able to see the create/login screen as well as the about us and product catalogue. Private users will be able to add items into the cart, view/edit the cart, as well as checking out the cart with the option to change to optimize towards the users' preferences such as light mode and dark mode. It has two interfaces one for admin and one for client
 
 
 ## File structure
