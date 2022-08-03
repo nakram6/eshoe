@@ -6,52 +6,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
-	<style> 
-	.navbar-brand {
-  font-weight: lighter;
-  color: #fdd935;
-}
-
-.nav-item, .nav-link {
-  font-weight: lighter;
-  color: #fdd935;
-} 
-
-.navbar-custom {
-  height: 70px;
-  <!--background-color: #394f8a;--> 
-}
-      
-      
-      body{
-        height: 100%;
-      
-      }
-      
-       footer {
-      position: fixed;
-      left: 0;
-      bottom 0;
-      width: 100%;
-      
-      
-      }
-      
-      .footer {
-       height: 600px;
-      
-      }
-      
-      
-      
-      
-      
-	</style> 
   </head>
   <body>
 
-    <!-- header/navbar -->
-     <!-- NAVBAR -->
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a href="#" class="navbar-brand">eShoe</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,13 +18,10 @@
       <div class="collapse navbar-collapse" id="navbar">
 
         <ul class="navbar-nav mr-auto ml-auto">
-          <li class="nav-item"><a href="#" class="nav-link">Home<span class="sr-only">(current)</span></a></li>
-          
-          <li class="nav-item"><a href="shop_women.html" class="nav-link">Shop Women</a></li>
-          <li class="nav-item"><a href="shop_kids.html" class="nav-link">Shop Kids</a></li>
-          <li class="nav-item"><a href="shop_promotional.html" class="nav-link">Promotion</a></li>
-         
-          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Men<span class="sr-only">(current)</span></a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Women</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Kids</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Sale</a></li>
         </ul>
 
         <form class="d-flex w-auto">
@@ -97,27 +52,39 @@
 
       </div>
     </nav>
-    <!-- ABout section -->
-	<div class="container my-5">
-      <div class="card" align="center">
-        <div class="card-body">
-          <h1 class="card-title mb-5">About</h1>
-          <p class= "text-left"> eShoe is a eCommerce platform where our company's <i> sole </i> mission is to create an afforable and efficient way for consumers to purchase shoes. 
-		  With our great and vast catalogue of available footwear, you will be able to find the pair that best suit you at the price that fits your budget. <br><br>
-		  
-		  To get started, create an account and search for the shoes you need. When you're done, we will ring you up, ship it out and you will receive your new pair in no time. <br><br>
-		  
-		  Try walking in our shoes...today. 
-		  </p> 
-        </div>
-	  </div> 
-	 </div>
 
-    <!-- footer -->
-    
-    
-    <div class=footer></div>
-   
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <img src="https://cdn.shopify.com/s/files/1/0037/0658/5123/products/1_6aa1ff2d-4cd9-4fce-9850-c4c4d94eeecd_1024x1024@2x.jpg?v=1602343465" alt="MenLatest2" style="width:100%">
+          </div>
+        </div>
+        <div class="col-lg-4 ml-5 mt-5 d-flex flex-row-reverse">
+          <div class="caption"><h1 class="text-dark">Steel Onyx</h1><h4 class="text-muted">Black</h4><h4 class="text-muted">$150</h4>
+            <hr>
+            <form action="" method="post">
+              <select class="form-select" name="product-quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <button type="submit" name="product-add" class="btn btn-success btn-dark">Add to Cart</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
     <footer>
       <div class="container-fluid mt-5 bg-dark text-white">
         <div class="row d-flex justify-content-center">
@@ -141,12 +108,11 @@
             </ul>
           </div>
           <div class="col-lg-9 d-flex justify-content-center">
-            <div class="under-footer"><p>Copyright Â© 2022 eShoe. All Rights Reserved.</div>
+            <div class="under-footer"><p>Copyright © 2022 eShoe. All Rights Reserved.</div>
           </div>
         </div>
       </div>
     </footer>
-  
 
   </body>
 </html>
