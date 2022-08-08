@@ -74,8 +74,8 @@
             </div>
            
             <div class="mb-3">
-              <label class="form-label">Email address</label>
-              <input class="form-control" type="email" placeholder="example@example.com" id="register" required name="email">
+              <label class="form-label">Email Address</label>
+              <input class="form-control" type="email" placeholder="Name@email.com" id="register" required name="email">
             </div>
             <div class="mb-3">
               <label class="form-label">Password</label>
