@@ -111,7 +111,7 @@ if(isset($_SESSION['logged_in'])){
                      <div class="form-group">
                          <label>Password</label>
                          <input type="password" class="form-control" id="account-password" name="password" placeholder="Password" required/>
-                     </div>
+                     </div> 
                      <div class="form-group">
                         <label>Confirm Password</label>
                         <input type="password" class="form-control" id="account-password-confirm" name="confirmPassword" placeholder="Password" required/>
