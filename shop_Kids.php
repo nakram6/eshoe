@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Men's</title>
+    <title>Kid's</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
@@ -61,7 +61,7 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="section-heading">
-              <h2>Kids's Latest</h2><span>Find available Kid's footwear here.</span>
+              <h2>Kids's</h2><span>Find available Kid's footwear here.</span>
             </div>
           </div>
         </div>
