@@ -48,7 +48,7 @@ function calculateTotalOrderPrice($order_details){
   }
 
   
-   return $total;
+   return $total; 
   
 
 }
