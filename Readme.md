@@ -66,7 +66,7 @@ I have helped in the designing/creating of the front-end for pages and features 
 
 **COMPLETED - Erase After**
 
--Most project files have been given header/footer except a few that are labelled 
--All files now PHP 
--Most pages completed except a few that are labelled 
+-Most project files have been given header/footer except a few that are labelled  
+-All files now PHP  
+-Most pages completed except a few that are labelled  
 
