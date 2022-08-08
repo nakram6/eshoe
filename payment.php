@@ -7,15 +7,10 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
 	<style> 
-	.navbar-brand,.footer-custom {
+	.navbar-brand,.footer-custom,.nav-item,.nav-link {
   font-weight: lighter;
   color: white;
 }
-
-.nav-item, .nav-link {
-  font-weight: lighter;
-  color: white;
-} 
 	</style> 
   </head>
   <body>
