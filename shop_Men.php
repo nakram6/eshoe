@@ -61,7 +61,7 @@
   </div>
 </nav>
 
-    <!-- MAIN CONTENT -->
+    <!-- Men's Footwear -->
     <div class="container mt-5">
       <div class="row">
         <div class="col-lg-6">
@@ -96,7 +96,7 @@
               <div class="caption"><p class="text-dark">Nike Air Max 95</p><p class="text-muted">$60</p></div>
             </a>
           </div>
-        </div> <!--men's shoes here --> 
+        </div> 
         <div class="col-md-4">
           <div class="thumbnail">
             <a href="#" class="text-decoration-none" target="_blank">
