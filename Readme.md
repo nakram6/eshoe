@@ -53,4 +53,7 @@ to php after injecting php code , Please write down your jobs or pages name what
 
 ## Assigned Job to Sevilla_Garcia, Elijah
 
-# eshoe
+HTML, CSS, JS, Bootstrap
+
+I have helped in creating front-end pages and features such as About, Payment, Contact, etc. and also have helped to convert most project HTML files into PHP files. 
+
