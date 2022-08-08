@@ -116,7 +116,7 @@
             <li><a href="#" class="text-decoration-none text-white">Home</a></li>
             <li><a href="#" class="text-decoration-none text-white">About</a></li>
             <li><a href="#" class="text-decoration-none text-white">Help</a></li>
-            <li><a href="#" class="text-decoration-none text-white">Contact</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Contact</a></li> 
           </ul>
         </div>
         <div class="col-lg-9 d-flex justify-content-center">
