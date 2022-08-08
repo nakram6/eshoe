@@ -64,7 +64,7 @@ HTML, CSS, JS, Bootstrap
 
 I have helped in the designing/creating of the front-end for pages and features such as About, Payment, Contact, Header/Footer modifications etc. and also have helped to convert all project HTML draft files into finalized PHP files complete with full page style/appearance. 
 
-**-------------------------------------------COMPLETED - Erase After---------------------------------------------------------------**
+**COMPLETED - Erase After**
 
 -Most project files have been given header/footer except a few that are labelled 
 -All files now PHP 
