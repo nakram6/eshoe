@@ -55,5 +55,11 @@ to php after injecting php code , Please write down your jobs or pages name what
 
 HTML, CSS, JS, Bootstrap
 
-I have helped in creating front-end pages and features such as About, Payment, Contact, etc. and also have helped to convert all project HTML files into PHP files. 
+I have helped in designing/creating the front-end for web pages and features such as About, Payment, Contact, etc. and also have helped to convert all project HTML files into PHP files. 
+
+**-------------------------------------------COMPLETED - Erase After---------------------------------------------------------------**
+
+-Most project files have been given header/footer except a few that are labelled 
+-All files now PHP 
+-Most pages completed except a few that are labelled 
 
