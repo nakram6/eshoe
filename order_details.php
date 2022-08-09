@@ -166,8 +166,7 @@ function calculateTotalOrderPrice($order_details){
 
   </body>
 </html>
-    </body>
-</html> 
+
 
 
 
