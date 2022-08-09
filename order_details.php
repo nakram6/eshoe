@@ -1,4 +1,13 @@
-
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>eShoe</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
 
 <?php
 
@@ -125,6 +134,40 @@ function calculateTotalOrderPrice($order_details){
               <?php } ?>
 
         </section>
+    
+        <footer>
+      <div class="container-fluid mt-5 bg-dark text-white">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-3 mt-3">
+            <div class="logo">
+              <h2>eShoe</h2>
+            </div>
+            <ul>
+              <li><a href="#" class="text-decoration-none text-white">123 Fake Street, Ontario, Canada</a></li>
+              <li><a href="#" class="text-decoration-none text-white">eshoe@email.com</a></li>
+              <li><a href="#" class="text-decoration-none text-white">123-456-7890</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 mt-3">
+            <h2>Useful Links</h2>
+            <ul>
+              <li><a href="#" class="text-decoration-none text-white">Homepage</a></li>
+              <li><a href="#" class="text-decoration-none text-white">About Us</a></li>
+              <li><a href="#" class="text-decoration-none text-white">Help</a></li>
+              <li><a href="#" class="text-decoration-none text-white">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-9 d-flex justify-content-center">
+            <div class="under-footer"><p>Copyright © 2022 eShoe. All Rights Reserved.</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
+    </body>
+</html> 
 
 
 
