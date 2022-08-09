@@ -37,7 +37,7 @@
           </button>
         </form>
 
-					<ul class="navbar-nav">
+		<ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
                             <?php
@@ -70,10 +70,10 @@
        <div class="container">
         <?php
         // Arrays to store loaded data
-        $servername = "host";
-        $username = "username";
-        $password = "password";
-        $dbname = "project";
+        $servername = "localhost";
+        $username = "akram6_eshoe";
+        $password = "Amf123456";
+        $dbname = "akram6_eshoe";
         // Create connection
         $conn = new mysqli(
             $servername,
@@ -85,33 +85,33 @@
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-         if (isset($_POST['product-delete']) and isset($_SESSION['email'])) {
-        $sql = "DELETE FROM `project_cart` WHERE id=" . $_POST['product-id'] . " AND email='" . $_SESSION['email'] . "'";
+         if (isset($_POST['product-delete']) and isset($_SESSION['user_id'])) {
+        $sql = "DELETE FROM `order_items` WHERE id=" . $_POST['order_id'] . " AND email='" . $_SESSION['user_id'] . "'";
         $conn->query($sql);
-    	} else if (isset($_POST['product-update']) and isset($_SESSION['email'])) {
+    	} else if (isset($_POST['product-update']) and isset($_SESSION['user_id'])) {
         $sql = "UPDATE `project_cart` SET `quantity`=" . $_POST['product-quantity'] . " WHERE id=" . $_POST['product-id'] . " AND email='" . $_SESSION['email'] . "'";
         $conn->query($sql);
     	}
 
         // Store schedule data
-        $sql = "SELECT id, email, quantity FROM project_cart WHERE email='" . $_SESSION['email'] .  "'";
+        $sql = "SELECT item_id, user_id, quantity FROM orders WHERE email='" . $_SESSION['user_id'] .  "'";
         $total = 0;
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                $sql = $sql = "SELECT id, name, price, subtitle, img FROM project_products WHERE id=" . $row['id'];
+                $sql = $sql = "SELECT shoe_id, shoe_name, shoe_price, shoe_description, img FROM shoes WHERE shoe_id=" . $row['shoe_id'];
                 $item = $conn->query($sql)->fetch_assoc();
-              	$total+= $row['quantity']*$item['price'];
+              	$total+= $item['shoe_price'];
                 echo '<br><div class="card mb-3">';
                 <div class="row align-items-center">
                 <div class="col-md-2">
                 
-                <img src="' . $item['img'] . '" class="img-fluid rounded-start" alt="' . $item['name'] . '">
+                <img src="' . $item['shoe_image'] . '" class="img-fluid rounded-start" alt="' . $item['shoe_name'] . '">
                 </div>
                 <div class="col-md-10">
                 <div class="card-body">
-                <h6 class="card-title">' . $item['name'] . ' x ' . $row['quantity'] . '</h6>
-                <p class="card-text"><small class="text-muted">$' . $row['quantity'] * $item['price'] . '</small></p>
+                <h6 class="card-title">' . $item['shoe_name'] . '</h6>
+                <p class="card-text"><small class="text-muted">$' .   $item['price'] . '</small></p>
                 <form action="" method="post">
                 <div class="row mt-3">
                 <div class="col-2 pe-2">
@@ -128,7 +128,7 @@
                 <div class="col-5 p-0">
                 <button type="submit" name="product-update" class="btn btn-primary">Update Quantity</button>
                 <button type="submit" name="product-delete" class="btn btn-danger">Delete Item</button>
-                <input type="hidden" name="product-id" value="' . $row['id'] . '">
+                <input type="hidden" name="product-id" value="' . $row['shoe_id'] . '">
                 
                 </div>
                 </div>
