@@ -164,6 +164,30 @@
             </a>
           </div>
         </div>
+	        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="#" class="text-decoration-none" target="_blank">
+              <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/09426720-e269-4b46-9aa7-397fcc9c38d4/jr-phantom-gt2-academy-mg-younger-older-multi-ground-football-boot-4zTkkw.png" alt="MenLatest1" style="width:100%">
+              <div class="caption"><p class="text-dark">Nike Jr. Phantom II </p><p class="text-muted">$70 30% OFF</p></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="#" class="text-decoration-none" target="_blank">
+              <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8a369129-d322-41c2-b16c-e43099fb52b6/jr-mercurial-vapor-15-club-tf-younger-older-football-shoes-6v8W5Z.png" alt="MenLatest2" style="width:100%">
+              <div class="caption"><p class="text-dark">Nike Mercurial Vapor 3s</p><p class="text-muted">$35 46% OFF</p></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="#" class="text-decoration-none" target="_blank">
+              <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d473b114-0040-44d6-808f-90dacdf08abf/sb-zoom-blazer-low-pro-gt-skate-shoes-rPD3XV.png" alt="MenLatest3" style="width:100%">
+              <div class="caption"><p class="text-dark">Nike SB Zoom Blazer</p><p class="text-muted">$78 10% OFF</p></div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
