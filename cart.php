@@ -142,7 +142,7 @@
               ';
               	
             }
-            
+            ?>
     <!-- FOOTER -->
     <footer>
       <div class="container-fluid mt-5 bg-dark text-white">
