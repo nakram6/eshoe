@@ -14,7 +14,6 @@
 	</style> 
   </head>
   <body>
-
  <!-- Header (navbar) -->
  <nav class="navbar navbar-expand-lg bg-dark"> <!--navbar-light bg-light (replace) --> 
   <a href="#" class="navbar-brand">eShoe</a>
@@ -22,7 +21,6 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbar">
-
   <div class="navbar-nav ml-auto">
   <a class="nav-item nav-link" href="#">About</a>
   <a class="nav-item nav-link" href="#">Sale</a>
@@ -31,7 +29,6 @@
   <a class="nav-item nav-link" href="#">Kids</a>
   <a class="nav-item nav-link" href="#">Contact</a>
 </div>
-
     <form class="d-flex w-auto">
       <input type="search" class="form-control" placeholder="Search" aria-label="Search"/>
       <button class="btn btn-dark btn-sm" type="button">
@@ -40,7 +37,6 @@
         </svg>
       </button>
     </form>
-
     <ul class="navbar-nav ml-1">
       <li class="nav-item ml-1">
         <a href="#" class="btn btn-dark btn-sm">
@@ -57,7 +53,6 @@
         </a>
       </li>
     </ul>
-
   </div>
 </nav>
     
@@ -79,24 +74,20 @@
                     <div class="inputbox mt-3"> <input type="text" class="form-control" name="Phone" required> <span>Phone Number</span> </div>
                 </div>
             </div>
-
                 <div class="row mt-3">
                     <div class="col-md-6">
                         <div class="inputbox mt-3 input-group-prepend"> <textarea class="form-control" name="Message" placeholder="Write your message here..." required> </textarea> </div>
                     </div> </div>
-
                   </div>
                   </div>
                 </div>
               </div>
-
           <div class="mt-4 mb-4 d-flex justify-content-between">
             <button class="btn btn-dark">Submit</button>
           </div>
          </div>
         </div>
       </div>
-
    <!--Footer-->
    <footer>
     <div class="container-fluid mt-5 bg-dark footer-custom">
@@ -126,6 +117,5 @@
       </div>
     </div>
   </footer>
-
   </body>
 </html>

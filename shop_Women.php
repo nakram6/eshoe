@@ -14,7 +14,7 @@
 	</style> 
   </head>
   <body>
- <!-- Header (navbar) -->
+<!-- Header (navbar) -->
  <nav class="navbar navbar-expand-lg bg-dark"> <!--navbar-light bg-light (replace) --> 
   <a href="#" class="navbar-brand">eShoe</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,12 +22,12 @@
   </button>
   <div class="collapse navbar-collapse" id="navbar">
   <div class="navbar-nav ml-auto">
-  <a class="nav-item nav-link" href="#">About</a>
-  <a class="nav-item nav-link" href="#">Sale</a>
-  <a class="nav-item nav-link" href="#">Men</a>
-  <a class="nav-item nav-link" href="#">Women</a>
-  <a class="nav-item nav-link" href="#">Kids</a>
-  <a class="nav-item nav-link" href="#">Contact</a>
+  <a class="nav-item nav-link" href="about.php">About</a>
+  <a class="nav-item nav-link" href="shop_sale.php">Sale</a>
+  <a class="nav-item nav-link" href="shop_men.php">Men</a>
+  <a class="nav-item nav-link" href="shop_women.php">Women</a>
+  <a class="nav-item nav-link" href="shop_kids.php">Kids</a>
+  <a class="nav-item nav-link" href="contact.php">Contact</a>
 </div>
     <form class="d-flex w-auto">
       <input type="search" class="form-control" placeholder="Search" aria-label="Search"/>
@@ -39,14 +39,14 @@
     </form>
     <ul class="navbar-nav ml-1">
       <li class="nav-item ml-1">
-        <a href="#" class="btn btn-dark btn-sm">
+        <a href="cart.php" class="btn btn-dark btn-sm">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
           </svg>
         </a>
       </li>
       <li class="nav-item ml-1">
-        <a href="#" class="btn btn-dark btn-sm">
+        <a href="signin.php" class="btn btn-dark btn-sm">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart" viewBox="1.5 3 13 10">
             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
           </svg>
@@ -55,7 +55,6 @@
     </ul>
   </div>
 </nav>
-
     <!-- Women's Footwear -->
       <div class="container mt-5">
       <div class="row">
@@ -166,7 +165,6 @@
         </div>
       </div>
     </div>
-
   
    <!--Footer-->
    <footer>

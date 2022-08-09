@@ -1,3 +1,65 @@
+<?php 
+
+session_start();
+
+include('backend/connection.php');
+
+
+if(isset($_SESSION['user_logged_in'])){
+    header('location: shop.php');
+    exit;
+}
+
+
+if(isset($_POST['login_btn'])){
+
+
+  $user_email = $_POST['email'];
+  $user_password = md5($_POST['password']);
+
+  $stmt = $conn->prepare("SELECT user_id,user_name, user_email, user_password FROM users WHERE user_email = ? AND user_password = ? LIMIT 1");
+
+  $stmt->bind_param('ss',$user_email,$user_password);
+
+  if($stmt->execute()){
+      $stmt->bind_result($user_id,$user_name,$user_email,$user_password);
+      $stmt->store_result();
+
+      if($stmt->num_rows() == 1){
+         $stmt->fetch();
+
+        $_SESSION['user_id'] = $user_id;
+        $_SESSION['user_name'] = $user_name;
+        $_SESSION['user_email'] = $user_email;
+        $_SESSION['user_logged_in'] = true;
+
+     
+        header('location: shop.php?login_success=logged in successfully');
+
+      }else{
+        header('location: signin.php?error=could not verify your account');
+      }
+
+  }else{
+    //error
+    header('location: signin.php?error=something went wrong');
+
+  }
+
+
+}
+
+
+
+
+
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -86,6 +148,9 @@
         </div>
       </div>
     </div>
+    
+   <div style="height:600px; "></div>
+    
 
    <!--Footer-->
    <footer>
@@ -120,53 +185,4 @@
   </body>
 </html>
 
-<!-- PHP code 
 
-<?php
-include('backend/connection.php');
-
-if(isset($_SESSION['logged_in'])){
-    header('location: account.php');
-    exit;
-}
-
-if(isset($_POST['login_btn'])){
-
-
-  $email = $_POST['email'];
-  $password = md5($_POST['password']);
-
-  $stmt = $conn->prepare("SELECT user_id,user_name, user_email, user_password FROM users WHERE user_email = ? AND user_password = ? LIMIT 1");
-
-  $stmt->bind_param('ss',$email,$password);
-
-  if($stmt->execute()){
-      $stmt->bind_result($user_id,$user_name,$user_email,$user_password);
-      $stmt->store_result();
-
-      if($stmt->num_rows() == 1){
-         $stmt->fetch();
-
-        $_SESSION['user_id'] = $user_id;
-        $_SESSION['user_name'] = $user_name;
-        $_SESSION['user_email'] = $user_email; 
-        $_SESSION['logged_in'] = true;
-
-        header('location: account.php?login_success=logged in successfully');
-
-      }else{
-        header('location: signin.php?error=could not verify your account');
-      }
-
-  }else{
-    
-    header('location: signin.php?error=something went wrong');
-
-  }
-
-
-}
-
-?>
-
---> 
