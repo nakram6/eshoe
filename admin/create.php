@@ -1,13 +1,18 @@
+<!-- 
+Project Name: eShoe
+Group Numbe: 18
+Members: Sevilla-Garcia Elijah, Huang Jason, Hu Steve, Bui Don, Akram Nadeem
+File Name: create.php
+Description: This file is used to creat new product
+Dated:  08/08/2022
+
+ -->
+
+
+
 <?php
 
 include('../backend/connection.php');
-
-
-
-
-
-
-
 
 
 if(isset($_POST['create'])){
@@ -20,17 +25,17 @@ if(isset($_POST['create'])){
  $shoe_color = $_POST['color'];
 
 
- //this is the file itself (image)
+ 
  $image1 =$_FILES['image1']['tmp_name'];
  $image2 =$_FILES['image2']['tmp_name'];
  $image3 =$_FILES['image3']['tmp_name'];
  $image4 =$_FILES['image4']['tmp_name'];
- //$file_name = $_FILES['image1']['name'];
+ 
 
 
- //image names
- $image_name1 = $product_name."1.jpeg"; //white shoes1.jpeg
- $image_name2 = $product_name."2.jpeg"; //white shoes2.jpeg
+ 
+ $image_name1 = $product_name."1.jpeg"; 
+ $image_name2 = $product_name."2.jpeg"; 
  $image_name3 = $product_name."3.jpeg";
  $image_name4 = $product_name."4.jpeg";
 
@@ -41,11 +46,11 @@ if(isset($_POST['create'])){
  move_uploaded_file($image4,"../assets/imgs/".$image_name4);
 
 
-  //create a new user
+  
   $stmt = $conn->prepare("INSERT INTO shoes (shoe_name,shoe_description,shoe_price,shoe_special_offer,
                                                 shoe_image,shoe_image2,shoe_image3,shoe_image4,
                                                 shoe_size,shoe_color)
-                                                VALUES (?,?,?,?,?,?,?,?,?,?)");
+                                            VALUES (?,?,?,?,?,?,?,?,?,?)");
                                                     
 
 

@@ -1,11 +1,38 @@
+<!-- 
+Project Name: eShoe
+Group Numbe: 18
+Members: Sevilla-Garcia Elijah, Huang Jason, Hu Steve, Bui Don, Akram Nadeem
+File Name: index.php
+Description: This file is index page
+Dated:  08/08/2022
+ -->
+
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title> Home </title>
+    <meta charset="UTF-8">
+  <meta name="description" content="Online Shoes ">
+  <meta name="keywords" content="Shoes, Man, Woman, Kids, sale">
+  <meta name="author" content="Sevilla-Garcia Elijah, Huang Jason, Hu Steve, Bui Don, Akram Nadeem">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".text-dark *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 	<style> 
 	.navbar-brand,.footer-custom,.nav-item,.nav-link,.carousel-img {
   font-weight: lighter;
@@ -16,7 +43,7 @@
   <body>
  <!-- Header (navbar) -->
  <nav class="navbar navbar-expand-lg bg-dark"> <!--navbar-light bg-light (replace) --> 
-  <a href="#" class="navbar-brand">eShoe</a>
+  <a href="index.php" class="navbar-brand">eShoe</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -27,10 +54,12 @@
   <a class="nav-item nav-link" href="shop_men.php">Men</a>
   <a class="nav-item nav-link" href="shop_women.php">Women</a>
   <a class="nav-item nav-link" href="shop_kids.php">Kids</a>
+    <a class="nav-item nav-link" href="connection.php">Shop</a>
   <a class="nav-item nav-link" href="contact.php">Contact</a>
+  <a class="nav-item nav-link" href="help.php">Help</a>
 </div>
     <form class="d-flex w-auto">
-      <input type="search" class="form-control" placeholder="Search" aria-label="Search"/>
+      <input id="myInput" type="search" class="form-control" placeholder="Search" aria-label="Search"/>
       <button class="btn btn-dark btn-sm" type="button">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
           <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -57,7 +86,7 @@
 </nav>
     <!-- Home -->
     <header>
-      <div class="container">
+      <div id="myDIV" class="container">
         <div id="carouselHeader" class="carousel slide mt-5" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">

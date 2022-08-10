@@ -1,3 +1,13 @@
+<!-- 
+Project Name: eShoe
+Group Numbe: 18
+Members: Sevilla-Garcia Elijah, Huang Jason, Hu Steve, Bui Don, Akram Nadeem
+File Name: logout.php
+Description: This file manage logout in admin panel
+Dated:  08/08/2022
+
+ -->
+
 <?php
 
 session_start();

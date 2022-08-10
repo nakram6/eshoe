@@ -1,3 +1,13 @@
+<!-- 
+Project Name: eShoe
+Group Numbe: 18
+Members: Sevilla-Garcia Elijah, Huang Jason, Hu Steve, Bui Don, Akram Nadeem
+File Name: index.php
+Description: This is the index page of admin panel
+Dated:  08/08/2022
+
+ -->
+
 <?php include('header.php'); ?>
 
 <?php 
@@ -13,28 +23,19 @@
 
 <?php
 
-
-
-          //1. determine page no
+          
           if(isset($_GET['page_no']) && $_GET['page_no'] != ""){
-            //if user has already entered page then page number is the one that they selected
+           
             $page_no = $_GET['page_no'];
           }else{
-            //if user just entered the page then default page is 1
-            $page_no = 1;
+           
           }
-
-
-
-          //2. return number of products 
           $stmt1 = $conn->prepare("SELECT COUNT(*) As total_records FROM orders");
           $stmt1->execute();
           $stmt1->bind_result($total_records);
           $stmt1->store_result();
           $stmt1->fetch();
 
-
-          //3. products per page
           $total_records_per_page = 5;
 
           $offset = ($page_no-1) * $total_records_per_page;
@@ -46,23 +47,25 @@
 
           $total_no_of_pages = ceil($total_records/$total_records_per_page);
 
-
-
-          //4. get all products
-
           $stmt2 = $conn->prepare("SELECT * FROM orders LIMIT $offset,$total_records_per_page");
           $stmt2->execute();
           $orders = $stmt2->get_result();
 
 
-
-          
-
-
-
-
 ?>
 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
 
 
 <div class="container-fluid">
@@ -165,13 +168,6 @@
 
 
 
-
-
-
-
-
-
-
       </div>
     </main>
   </div>
@@ -187,3 +183,14 @@
       <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

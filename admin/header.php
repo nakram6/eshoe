@@ -1,3 +1,12 @@
+<!-- 
+Project Name: eShoe
+Group Numbe: 18
+Members: Sevilla-Garcia Elijah, Huang Jason, Hu Steve, Bui Don, Akram Nadeem
+File Name: header.php
+Description: This file is the header of admin panel
+Dated:  08/08/2022
+
+ -->
 <?php session_start(); ?>
 
 <?php include('../backend/connection.php'); ?>
@@ -16,10 +25,8 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
 
-    
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <!-- Favicons -->
+  
 <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -45,9 +52,7 @@
       }
     </style>
 
-    
-    <!-- Custom styles for this template -->
-    <!-- <link href="dashboard.css" rel="stylesheet"> -->
+   
   </head>
   <body>
     

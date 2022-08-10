@@ -1,3 +1,14 @@
+<!-- 
+Project Name: eShoe
+Group Numbe: 18
+Members: Sevilla-Garcia Elijah, Huang Jason, Hu Steve, Bui Don, Akram Nadeem
+File Name: product.php
+Description: This file is for product of inventory
+Dated:  08/08/2022
+
+ -->
+
+
 <?php include('header.php'); ?>
 
 <?php 
@@ -11,11 +22,7 @@
 ?>
 
 
-
-
-
 <?php
-
 
 
         
@@ -29,7 +36,7 @@
 
 
 
-          //2. return number of products 
+          
           $stmt1 = $conn->prepare("SELECT COUNT(*) As total_records FROM shoes");
           $stmt1->execute();
           $stmt1->bind_result($total_records);
@@ -49,22 +56,33 @@
 
           $total_no_of_pages = ceil($total_records/$total_records_per_page);
 
-
-
-          
-
           $stmt2 = $conn->prepare("SELECT * FROM shoes LIMIT $offset,$total_records_per_page");
           $stmt2->execute();
           $products = $stmt2->get_result();
 
 
 
-          
-
-
-
 
 ?>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+</head>
+<body>
+
 
 
 
@@ -198,14 +216,6 @@
 
 
 
-
-
-
-
-
-
-
-
       </div>
     </main>
   </div>
@@ -222,3 +232,9 @@
   
     </body>
 </html>
+
+
+
+
+
+

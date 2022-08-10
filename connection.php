@@ -1,86 +1,69 @@
+
 <!-- 
-    Project Name: eShoe
+Project Name: eShoe
 Group Numbe: 18
 Members: Sevilla-Garcia Elijah, Huang Jason, Hu Steve, Bui Don, Akram Nadeem
-File Name: signup.php
-Description: This file is about signup page on client side
-  -->
+File Name: connection.php
+Description: This file is used to add products in the cart
+
+ -->
 
 <?php
 
+session_start();
 include('backend/connection.php');
-        
-if(isset($_SESSION['logged_in'])){
-  header('location: account.php');
-  exit;
-}
+$cart_count = count(array_keys($_SESSION["shopping_cart"]));
+$shopping_cart = "";
 
-if(isset($_POST['register'])){
+$status="";
+if (isset($_POST['code']) && $_POST['code']!=""){
+$code = $_POST['code'];
+$result = mysqli_query($conn, "SELECT * FROM `shoes` WHERE `shoe_id`='$code'"
+);
+$row = mysqli_fetch_assoc($result);
+ $shoe_id = $row['shoe_id'];
+$shoe_name = $row['shoe_name'];
 
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $password = $_POST['password'];
-  $confirmPassword = $_POST['confirmPassword'];
+$shoe_price = $row['shoe_price'];
+$shoe_image = $row['shoe_image'];
 
-   if($password !== $confirmPassword){
-    header('location: signup.php?error=passwords dont match');
+$cartArray = array(
+	$code=>array(
+	'shoe_name'=>$shoe_name,
+	'shoe_id'=>$shoe_id,
+	'shoe_price'=>$shoe_price,
+	'quantity'=>1,
+	'shoe_image'=>$shoe_image)
+);
   
- }else if(strlen($password) < 6){
-    header('location: signup.php?error=password must be at least 6 charachters');
-   }else{
-               
-                $stmt1= $conn->prepare("SELECT count(*) FROM users where user_email=?");
-                $stmt1->bind_param('s',$email);
-                $stmt1->execute();
-                $stmt1->bind_result($num_rows);
-                $stmt1->store_result();
-                $stmt1->fetch();
+  
+  if(empty($_SESSION["shopping_cart"])) {
+    $_SESSION["shopping_cart"] = $cartArray;
+    $status = "<div class='box'>Product is added to your cart!</div>";
+}else{
+    $array_keys = array_keys($_SESSION["shopping_cart"]);
+    if(in_array($code,$array_keys)) {
+	$status = "<div class='box' style='color:red;'>
+	Product is already added to your cart!</div>";	
+    } else {
+    $_SESSION["shopping_cart"] = array_merge(
+    $_SESSION["shopping_cart"],
+    $cartArray
+    );
+    $status = "<div class='box'>Product is added to your cart!</div>";
+	}
 
-               
-                if($num_rows != 0){
-                  header('location: signup.php?error=user with this eamil already exists');
-                  
-
-                           }else{
-                        
-                        $stmt = $conn->prepare("INSERT INTO users (user_name,user_email,user_password) 
-                        VALUES (?,?,?)");
-
-                        $stmt->bind_param('sss',$name,$email,md5($password));
-            
-                        if($stmt->execute()){
-                              $user_id = $stmt->insert_id;
-                              $_SESSION['user_id'] = $user_id;
-                              $_SESSION['user_email'] = $email;
-                              $_SESSION['user_name'] = $name;
-                              $_SESSION['logged_in'] = true;
-                              header('location: account.php?register_success=You registered successfully');
-
-                        }else{
-
-                             header('location: signup.php?error=could not create an account at the moment');
-
-                        }
-
-
-
-                }
-
-              }
-
-
+	}
 }
-
-
-
 ?>
+
 
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>About</title>
+    <title>Connect</title>
     <meta charset="UTF-8">
   <meta name="description" content="Online Shoes ">
   <meta name="keywords" content="Shoes, Man, Woman, Kids, sale">
@@ -88,12 +71,14 @@ if(isset($_POST['register'])){
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+
 
     <!-- Header (navbar) -->
     <nav class="navbar navbar-expand-lg bg-dark">
@@ -110,10 +95,12 @@ if(isset($_POST['register'])){
                 <a class="nav-item nav-link" href="shop_men.php">Men</a>
                 <a class="nav-item nav-link" href="shop_women.php">Women</a>
                 <a class="nav-item nav-link" href="shop_kids.php">Kids</a>
+                <a class="nav-item nav-link" href="connection.php">Shop</a>
                 <a class="nav-item nav-link" href="contact.php">Contact</a>
+                <a class="nav-item nav-link" href="help.php">Help</a>
             </div>
             <form class="d-flex w-auto">
-                <input type="search" class="form-control" placeholder="Search" aria-label="Search" />
+                <input id="myInput" type="search" class="form-control" placeholder="Search" aria-label="Search" />
                 <button class="btn btn-dark btn-sm" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" class="bi bi-cart"
                         viewBox="0 0 16 16">
@@ -129,6 +116,7 @@ if(isset($_POST['register'])){
                             class="bi bi-cart" viewBox="0 0 16 16">
                             <path
                                 d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            <span style="color:orange;"><?php echo $cart_count; ?></span>
                         </svg>
                     </a>
                 </li>
@@ -146,47 +134,44 @@ if(isset($_POST['register'])){
     </nav>
 
 
-    <!-- MAIN CONTENT -->
-    <div class="container my-5">
-        <div class="card" align="center">
-            <div class="card-body">
-                <h1 class="card-title mb-5">Sign Up</h1>
-                <form id="register-form" method="POST" action="signup.php">
-                    <p style="color: red;"><?php if(isset($_GET['error'])){ echo $_GET['error']; }?></p>
-                    <div class="mb-3">
-                        <label class="form-label">Name</label>
-                        <input class="form-control" type="text" id="register-name" name="name" placeholder="Name"
-                            required />
-                    </div>
+    <div id="myDIV" class="container-fluid mt-5">
 
-                    <div class="mb-3">
-                        <label class="form-label">Email address</label>
-                        <input class="form-control" type="email" placeholder="example@example.com" id="register"
-                            required name="email">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Password</label>
-                        <input class="form-control" type="password" placeholder="Password" required
-                            id="register-password" name="password">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Re-Enter your password</label>
-                        <input class="form-control" type="password" id="register-confirm-password"
-                            name="confirmPassword" placeholder="Confirm Password" required />
-                    </div>
-                    <div class="mb-3">
-                        <button class="btn btn-dark" type="submit" id="register-btn" name="register"
-                            value="Register">Register</button>
-                    </div>
-                    <div>
-                        <a id="login-url" href="signin.php">Already registered? Login here.</a>
-                    </div>
-                </form>
-            </div>
+
+
+        <?php
+
+
+$result = mysqli_query($conn,"SELECT * FROM `shoes`");
+while($row = mysqli_fetch_assoc($result)){
+		echo "<div class='product_wrapper'>
+			  <form method='post' action=''>
+			  <input type='hidden' name='code' value=".$row['shoe_id']." />
+			  <div class='image'><img src='./assets/imgs/".$row['shoe_image']."' /></div>
+              
+             
+              
+			  <div class='name'>".$row['shoe_name']."</div>
+		   	  <div class='price'>$".$row['shoe_price']."</div>
+			  <button type='submit' class='buy'>Buy Now</button>
+			  </form>
+		   	  </div>";
+        }
+mysqli_close($conn);
+?>
+
+        <div style="clear:both;"></div>
+
+        <div class="message_box" style="margin:10px 0px;">
+            <?php echo $status; ?>
         </div>
+
+        <br /><br />
+
+
     </div>
 
-    <div style="height:400px; "></div>
+
+
 
     <!-- FOOTER -->
     <footer>

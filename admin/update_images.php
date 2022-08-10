@@ -1,3 +1,13 @@
+<!-- 
+Project Name: eShoe
+Group Numbe: 18
+Members: Sevilla-Garcia Elijah, Huang Jason, Hu Steve, Bui Don, Akram Nadeem
+File Name: update_images.php
+Description: This file is used to update the images
+Dated:  08/08/2022
+ -->
+
+
 <?php
 
 include('../backend/connection.php');

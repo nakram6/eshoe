@@ -1,3 +1,15 @@
+<!-- 
+Project Name: eShoe
+Group Numbe: 18
+Members: Sevilla-Garcia Elijah, Huang Jason, Hu Steve, Bui Don, Akram Nadeem
+File Name: delete.php
+Description: This file is used to delete product
+Dated:  08/08/2022
+
+ -->
+
+
+
 <?php 
 
 session_start();
