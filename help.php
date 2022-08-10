@@ -82,7 +82,7 @@
   
           <div class="card">
             <div  class="bg-white card-header">
-              <h6><a href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="py-1 d-block position-relative text-dark collapsible-link">Where can I find the page to login or create an account?</a></h6>
+              <h6><a href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="py-1 d-block position-relative text-dark collapsible-link">Where can I find the page to log in or create an account?</a></h6>
             </div>
             <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
               <div class="card-body p-4">
@@ -113,7 +113,7 @@
             </div>
             <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample" class="collapse">
               <div class="card-body p-4">
-                <p class="font-weight-lighter"> Click on the site menu's "About" button if you like to learn more about our platform's mission.</p>
+                <p class="font-weight-lighter"> Click on the site menu's "About" button if you would like to learn more about our platform's mission.</p>
               </div>
             </div>
           </div>
