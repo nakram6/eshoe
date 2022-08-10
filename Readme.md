@@ -52,7 +52,10 @@ to php after injecting php code , Please write down your jobs or pages name what
 
 
 ## Assigned Job to Hu, Steve
+HTML
 
+I have helped in the creating of the front-end aspect of our site's promotional shoes'page.
+I also helped finishing our presentation, especially the parts of Sign up/in, Product Browse, Product Detail and Payment.
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
