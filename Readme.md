@@ -3,17 +3,39 @@
 eCommerce site for purchasing affordable shoes 
 
 
-![alt text](https://github.com/[nakram6]/[reponame]/blob/[main]/image.jpg?raw=true)
 
 
 ![eShoe](https://github.com/nakram6/eshoe/blob/main/assets/imgs/Screen%20Shot%202022-08-10%20at%208.27.26%20PM.png)
 
 
+## Group Number
+   
+   Project Team 18
+   
+   
+## Group Members
+   
+   - Sevilla-Garcia Elijah
+   -  Huang Jason
+   -  Hu Steve
+   -  Bui Don
+   -  Akram Nadeem
+   
+   
+   
 
 
 ## Technology
 
-html, css, bootstap, php, sql, font awesome
+- HTML
+- CSS
+- BootStrap
+- PHP
+- SQL
+- Git hub
+
+
+![logo](https://github.com/nakram6/eshoe/blob/main/assets/imgs/images%20(1).png?raw=true)
 
 
 ## Description
@@ -26,54 +48,43 @@ Our plan for our site is to create an eCommerce site where the main purpose of t
 2. asset folder contains css , js, and images folder
 3. backend folder contain server related files
 4. common folder has footer and header file which will display on every client file but not on admin . 
+5. client side files are in the root folder
+
+![structure](https://github.com/nakram6/eshoe/blob/main/assets/imgs/Screen%20Shot%202022-08-10%20at%2010.24.16%20PM.png?raw=true)
+
+
+## Database Structure
+
+There are six tables in MYSQL Database
+
+
+![DB](https://github.com/nakram6/eshoe/blob/main/assets/imgs/Screen%20Shot%202022-08-10%20at%2010.09.00%20PM.png?raw=true)
+
+
+## Admin Interface
+In the admin interface only admin can login and there is no signup page in admin Interface
+
+
+
+## Client Interface
+
+In the client Interface , Client can signup and after he han login to his account
+
+
+
+
+
+## Online Payment Solution
+
+Paypal Sandbox is used for accepting payments
+
+
+![payment](https://github.com/nakram6/eshoe/blob/main/assets/imgs/Screen%20Shot%202022-08-10%20at%2010.38.58%20PM.png?raw=true)
 
 
 
 
 
 
-## Assigned Job to Akram, Nadeem
- 
-SQL and PHP 
 
-As I have created all pages in html you guys assigned pages to yourself and try to finish this and after this I will change them
-to php after injecting php code , Please write down your jobs or pages name what you can do in your name section. Also please check
- file structure , If you have any suggestion we can dicuss in the meeting
-
--------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-## Assigned Job to Bui, Don
-
-
-
--------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-## Assigned Job to Huang, Jason
-
-
-
--------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-## Assigned Job to Hu, Steve
-HTML, CSS, JS
-
-I have helped creating a simple sitemap.
-I have helped in the creating of the front-end aspect and features of our site's promotional shoes' page.
-I have helped finishing our presentation, especially the parts of Sign up/in, Product Browse, Product Detail and Payment. I also have helped finishing the final report with answering many different questions from the table provided from our professor.
-
--------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-## Assigned Job to Sevilla-Garcia, Elijah
-
-HTML, CSS, JS, Bootstrap
-
-I have helped in the designing/creating of the front-end aspect for a variety of the site's pages and features such as About, Payment, Contact, Help, Header/Footer modifications, etc., production of the presentation and final report, and conversion of all project HTML draft files into finalized PHP files complete with full page style/appearance (front-end). 
 
