@@ -34,7 +34,7 @@ Our plan for our site is to create an eCommerce site where the main purpose of t
 
 ## Assigned Job to Akram, Nadeem
  
-sql and php 
+SQL and PHP 
 
 As I have created all pages in html you guys assigned pages to yourself and try to finish this and after this I will change them
 to php after injecting php code , Please write down your jobs or pages name what you can do in your name section. Also please check
@@ -70,7 +70,7 @@ I also helped finishing our presentation, especially the parts of Sign up/in, Pr
 
 
 
-## Assigned Job to Sevilla_Garcia, Elijah
+## Assigned Job to Sevilla-Garcia, Elijah
 
 HTML, CSS, JS, Bootstrap
 
