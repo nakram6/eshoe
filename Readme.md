@@ -63,8 +63,9 @@ to php after injecting php code , Please write down your jobs or pages name what
 ## Assigned Job to Hu, Steve
 HTML, CSS, JS
 
+I have helped creating a simple sitemap.
 I have helped in the creating of the front-end aspect and features of our site's promotional shoes' page.
-I also helped finishing our presentation, especially the parts of Sign up/in, Product Browse, Product Detail and Payment.
+I have helped finishing our presentation, especially the parts of Sign up/in, Product Browse, Product Detail and Payment. I also have helped finishing the final report with answering many different questions from the table provided from our professor.
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
