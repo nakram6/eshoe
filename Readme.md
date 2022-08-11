@@ -63,7 +63,7 @@ to php after injecting php code , Please write down your jobs or pages name what
 ## Assigned Job to Hu, Steve
 HTML, CSS, JS
 
-I have helped in the creating of the front-end aspect and feature of our site's promotional shoes'page.
+I have helped in the creating of the front-end aspect and features of our site's promotional shoes' page.
 I also helped finishing our presentation, especially the parts of Sign up/in, Product Browse, Product Detail and Payment.
 
 -------------------------------------------------------------------------------------------------------------------------------------
@@ -74,6 +74,5 @@ I also helped finishing our presentation, especially the parts of Sign up/in, Pr
 
 HTML, CSS, JS, Bootstrap
 
-I have helped in the designing/creating of the front-end aspect for the site's pages and features such as About, Payment, Contact, Help, Header/Footer modifications, etc..
-I have also helped to convert all project HTML draft files into finalized PHP files complete with full page style/appearance. 
+I have helped in the designing/creating of the front-end aspect for a variety of the site's pages and features such as About, Payment, Contact, Help, Header/Footer modifications, etc., production of the presentation and final report, and conversion of all project HTML draft files into finalized PHP files complete with full page style/appearance (front-end). 
 
