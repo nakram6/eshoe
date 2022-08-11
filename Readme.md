@@ -2,6 +2,15 @@
 
 eCommerce site for purchasing affordable shoes 
 
+
+![alt text](https://github.com/[nakram6]/[reponame]/blob/[main]/image.jpg?raw=true)
+
+
+![eShoe](https://github.com/nakram6/eshoe/blob/main/assets/imgs/Screen%20Shot%202022-08-10%20at%208.27.26%20PM.png)
+
+
+
+
 ## Technology
 
 html, css, bootstap, php, sql, font awesome
