@@ -32,7 +32,7 @@ eCommerce site for purchasing affordable shoes
 - BootStrap
 - PHP
 - SQL
-- Git hub
+- Github
 
 
 ![logo](https://github.com/nakram6/eshoe/blob/main/assets/imgs/images%20(1).png?raw=true)
